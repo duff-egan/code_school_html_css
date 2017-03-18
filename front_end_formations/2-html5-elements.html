@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="../code_school_notes.css">
+       <title>HTML5 Elements</title>
+    </head>
+    <body>
+        <header>
+            <a href="../code_school_notes.html"><img src="../assets/code-school-logo.png" alt="Code School Logo" /></a>
+            <h1>HTML5 Elements</h1>
+        </header>
+        <main>
+<!-- ====================== -->
+        <section>
+
+            <h2>Section</h2>
+            <p>The <strong>section</strong> element represents a generic document or application section - W3C specification.</p>
+            <p>This is very similar to a <strong>div</strong> element. However a div has no semantic meaning, whereas the <strong>section</strong> element does. It's used for grouping together thematically related content.</p>
+            <p>In his book, <em>HTML5 For Web Designers</em>, Jeremy Keith tells us "You might want to replace some of your div elements with section elements, but remember to always ask yourself, 'Is all of the content related?'"</p>
+            <p>While all section elements don't necessarily have to contain a heading, most generally do.</p>
+            <p>Prior to HTML5 we probably would have used a div with a class or id of "section:"</p>
+
+            <pre>&lt;div class="section"&gt;
+    &lt;h2&gt;The Gallery&lt;/h2&gt;
+    &lt;!-- ... --&gt;
+&lt;/div&gt;</pre>
+
+            <p>In HTML5 though we can instead use the section element to wrap our markup which makes our document much more semantic:</p>
+            
+            <pre>&lt;section&gt;
+    &lt;h2&gt;The Gallery&lt;/h2&gt;
+    &lt;!-- ... --&gt;
+&lt;/section&gt;</pre>
+
+        </section>
+<!-- ====================== -->
+        <section>
+            <h2>Header</h2>
+            <p>A group of introductory or navigational aids - W3C specification.</p>
+            <p>It's important to note that you can include more than one <strong>header</strong> on a page - it's not just limited to the top portion of your site.</p>
+            <p>The header usually appears at the top of a document or section, but is defined by its <em>content</em> rather than its <em>position.</em></p>
+            <p>Prior to HTML5 we probably would have used a div with a class or id of "header:"</p>
+
+            <pre>&lt;div class="header"&gt;
+    &lt;!-- ... --&gt;
+&lt;/div&gt;</pre>
+
+            <p>In HTML5 though we can instead use the header element to wrap our markup which makes our document much more semantic:</p>
+
+            <pre>&lt;header&gt;
+    &lt;!-- ... --&gt;
+&lt;/header&gt;</pre>
+            <p>Remember, you can have header elements in different parts of the page, and inside of other HTML5 elements:</p>
+
+            <pre>&lt;section&gt;
+    &lt;header&gt;
+        &lt;h1&gt;The heading of the section&lt;/h1&gt;
+        &lt;p&gt;This is content in the header&lt;/p&gt;
+    &lt;header&gt;
+    &lt;p&gt;This is some information within the section.&lt;/p&gt;
+&lt;/section&gt;</pre>
+
+        </section>
+<!-- ====================== -->
+        <section>
+            <h2>Footer</h2>
+            <p>The <strong>footer</strong> element represents a footer for its nearest ancestor sectioning content or sectioning root element - W3C specification.</p>
+            <p>Like the header, the footer element is <em>not</em> position-dependent. It should describe the content it is contained within.</p>
+
+            <p>Prior to HTML5 we probably would have used a div with a class or id of "footer:"</p>
+
+            <pre>&lt;div class="footer"&gt;
+    &lt;!-- ... --&gt;
+&lt;/div&gt;</pre>
+
+            <p>In HTML5 though we can instead use the footer element to wrap our markup which makes our document much more semantic:</p>
+
+            <pre>&lt;footer&gt;
+    &lt;!-- ... --&gt;
+&lt;/footer&gt;</pre>
+
+            <p>Like the header, we can also put the footer element inside other HTML5 elements:</p>
+            <pre>&lt;section&gt;
+    &lt;header&gt;
+        &lt;h1&gt;The heading of the section&lt;/h1&gt;
+        &lt;p&gt;This is content in the header&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;p&gt;This is some information within the section.&lt;/p&gt;
+    &lt;footer&gt;
+        &lt;p&gt;By "Author Name"&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/section&gt;</pre>
+
+        </section>
+<!-- ====================== -->
+        <section>
+            <h2>Aside</h2>
+            <p>Initially, the HTML5 spec defined the <strong>aside</strong> element as being "tangentially related to the content surrounding it," which essentially meant that it was not directly related to the content, but expands upon it.</p>
+            <p>However, the aside element now covers various contexts:</p>
+            <ul>
+                <li>When used <em>within</em> an article element, the aside contents should be related <em>to that particular article</em> it is contained within.</li>
+                <li>When used <em>outside</em> an article element, the aside contents should be <em>specifically related to the site.</em></li>
+            </ul>
+            <p>An aside element is most appropriate when it is used to represent content that is <em>not</em> the primary focus of an article or page, but it is still <em>related</em> to the article or page.</p>
+
+            <p>Prior to HTML5 we probably would have used a div with a class or id of "sidebar:"</p>
+
+            <pre>&lt;div class="sidebar"&gt;
+    &lt;!-- ... --&gt;
+&lt;/div&gt;</pre>
+
+            <p>In HTML5 though we can instead use the aside element to wrap our markup which makes our document much more semantic:</p>
+
+            <pre>&lt;aside&gt;
+    &lt;!-- ... --&gt;
+&lt;/aside&gt;</pre>
+
+            <p>Like the header and footer elements, we can also next the aside element inside other HTML5 elements such as the section:</p>
+            <pre>&lt;section&gt;
+    &lt;header&gt;
+        &lt;h1&gt;The heading of the section&lt;/h1&gt;
+        &lt;p&gt;This is content in the header&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;p&gt;This is some information within the section.&lt;/p&gt;
+    &lt;aside&gt;
+        &lt;p&gt;Some secondary information.&lt;/p&gt;
+    &lt;/aside&gt;
+    &lt;footer&gt;
+        &lt;p&gt;By "Author Name"&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/section&gt;</pre>
+
+        </section>
+<!-- ====================== -->
+        <section>
+            <h2>Nav</h2>
+            <p>The <strong>nav</strong> element represents a section of a page that links to other pages or to parts within the page: a section with navigation links - W3C specification.</p>
+            <p>The nav element is intended for "major navigation."</p>
+            
+            <p>Prior to HTML5 we probably would have used an unordered list with a class or id of "nav:"</p>
+
+            <pre>&lt;ul class="nav"&gt;
+    &lt;!-- ... --&gt;
+&lt;/ul&gt;</pre>
+
+            <p>In HTML5 though we can instead use the nav element to wrap our markup which makes our document much more semantic:</p>
+
+            <pre>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;!-- ... --&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+
+        </section>
+<!-- ====================== -->
+        <section>
+            <h2>Article</h2>
+            <p>The <strong>article</strong> element represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable, e.g. in syndication - W3C specification.</p>
+            <p>The article element is another type of section. It is used for self-contained related content.</p>
+            <p>Determining if a particular piece of content is "self-contained:" Ask yourself if you would sydicate the content in an RSS or Atom feed.</p>
+            <p>Some uses for the article tag:</p>
+            <ul>
+                <li>A blog post</li>
+                <li>A news story</li>
+                <li>A comment on a post</li>
+                <li>A review</li>
+            </ul>
+            
+            <p>Prior to HTML5 we probably would have used a div with a class or id of "article:"</p>
+
+            <pre>&lt;div class="article"&gt;
+    &lt;!-- ... --&gt;
+&lt;/div&gt;</pre>
+
+            <p>In HTML5 though we can instead use the article element to wrap our markup which makes our document much more semantic:</p>
+
+            <pre>&lt;article&gt;
+    &lt;!-- ... --&gt;
+&lt;/article&gt;</pre>
+
+        </section>
+<!-- ====================== -->
+        <section>
+            <h2>Main</h2>
+            <p>The <strong>main</strong> element represents the main content of the body of a document or application - W3C specification.</p>
+            <p>The main content area consists of content that is directly related to or expands upon the central topic of a document or central functionality of an application - W3C specification.</p>
+            <ul>
+                <li>Do <em>not</em> include more than one main element in a document</li>
+                <li>Do <em>not</em> include the main element inside of an article, aside, footer, header, or nav element</li>
+            </ul>
+            
+            <p>Prior to HTML5 we probably would have used a div with a class or id of "main:"</p>
+
+            <pre>&lt;div class="main"&gt;
+    &lt;!-- ... --&gt;
+&lt;/div&gt;</pre>
+
+            <p>In HTML5 though we can instead use the main element to wrap our markup which makes our document much more semantic:</p>
+
+            <pre>&lt;main&gt;
+    &lt;!-- ... --&gt;
+&lt;/main&gt;</pre>
+
+        </section>
+<!-- ====================== -->
+        <section>
+            <h2>Figure/Figcaption</h2>
+            <p>The <strong>figure</strong> element represents a unit of content, optionally with a caption, that is self-contained, that is typically referenced as a single unit from the main flow of the document, and that can be moved away from the main flow of the document without affecting the document's meaning - W3C specification.</p>
+            <p>A common use of the figure tag is for an image within an article:</p>
+            
+            <pre>&lt;figure&gt;
+    &lt;img src="image.jpg" alt="My Picture" /&gt;
+&lt;/figure&gt;</pre>
+
+            <p>The <strong>figcaption</strong> element represents a caption or legend for a figure - W3C specification.</p>
+            <p>Example usage of the figcaption tag:</p>
+
+            <pre>&lt;figure&gt;
+    &lt;img src="image.jpg" alt="My Picture" /&gt;
+    &lt;figcaption&gt;This is a caption for the picture.&lt;/figcaption&gt;
+&lt;/figure&gt;</pre>
+
+        </section>
+<!-- ====================== -->
+        <section>
+            <h2>Time</h2>
+            <p>The <strong>time</strong> element represents either a time on a 24 hour clock, or a precise date in the proleptic Gregorian calendar, optionally with a time and a time-zone offset - W3C specification.</p>
+            <p>Example usage of the <strong>time</strong> tag:</p>
+            
+            <pre>&lt;time&gt;2013-09-16&lt;/time&gt;</pre>
+
+            <p>However, we want the format "mm/dd/yyy." So we put that format in between our time tags:</p>
+
+            <pre>&lt;time&gt;09/16/2013&lt;/time&gt;</pre>
+
+            <p>But in order to use that date format, we need to make an important change. We have to add the <strong>datetime</strong> attribute to our time element with the desired date format:</p>
+
+            <pre>&lt;time datetime="2013-09-16"&gt;09/16/2013&lt;/time&gt;</pre>
+
+            <p>This allows us to use any relevant content to the date or time within the time element. If we don't use that datetime attribute on the time element, the content must either be a valid date, time, or a precise datetime.</p>
+
+        </section>
+
+<!-- ====================== -->
+        </main>
+        <footer>
+            <div class="mybutton"><a href="../code_school_notes.html">Main Page</a></div>
+        </footer>
+    </body>
+</html>

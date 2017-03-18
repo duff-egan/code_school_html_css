@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="../code_school_notes.css">
+       <title>Fonts</title>
+    </head>
+    <body>
+        <header>
+            <a href="../code_school_notes.html"><img src="../assets/code-school-logo.png" alt="Code School Logo" /></a>
+            <h1>Fonts</h1>
+        </header>
+        <div>
+            <p>Use quotes if fonts are multi-word:</p>
+            <pre>body {
+    font-family: Helvetica, Arial, "Times New Roman", sans-serif;
+}</pre>
+            <p>We can reset all of the font properties to a baseline default so that the browser isn't doing it anymore.</p>
+             <pre>html, body, hl, h2, h3, p, ol, ul, li, a {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    <strong>font-size: 100%;
+    font: inherit;</strong>
+}</pre>
+            <pre>font-weight: bold;</pre>
+            <p>"normal" is the default weight. We can also use:</p>
+            <ul>
+                <li>lighter</li>
+                <li>bolder</li>
+                <li>100, 200 ... 900</li>
+            </ul>
+            <pre>font-style: italic;
+text-transform: uppercase;
+font-weight: lighter;</pre>
+            
+            <div class="foundations-example-chp4-base foundations-example-chp4-font-style">
+                <p>Lorem ipsum dolor sit amet, at per unum nonumes sapientem, aperiri facilisi an ius. Id per modus iusto fuisset. Debitis maiestatis eum in, ea autem soleat mel. Vel unum simul tacimates eu, veri erroribus concludaturque ea pri.</p>
+            </div>
+            
+            <p>Line-height is like margin for each line in a box.</p>
+            <pre>.main-content p {
+    line-height: 30px;
+}</pre>
+            <div class="foundations-example-chp4-base foundations-example-chp4-line-height">
+                <p>Lorem ipsum dolor sit amet, at per unum nonumes sapientem, aperiri facilisi an ius. Id per modus iusto fuisset. Debitis maiestatis eum in, ea autem soleat mel. Vel unum simul tacimates eu, veri erroribus concludaturque ea pri.</p>
+            </div>
+            <p>For more info on font values, see the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font" target="_blank">Mozilla Developer Network section on fonts</a>.</p>
+        
+        </div>
+        <footer>
+            <div class="mybutton"><a href="../code_school_notes.html">Main Page</a></div>
+        </footer>
+    </body>
+</html>

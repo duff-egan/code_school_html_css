@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="../code_school_notes.css">
+       <title>Images &amp; Background Images</title>
+    </head>
+    <body>
+        <header>
+            <a href="../code_school_notes.html"><img src="../assets/code-school-logo.png" alt="Code School Logo" /></a>
+            <h1>Images &amp; Background Images</h1>
+        </header>
+        <div>
+            <p>There are three main types of webpage images:
+                <ul>
+                    <li>Content images: just as necessary to the page as all of the text.</p>
+                    <li>Layout images: These are in the background, and are not necessary to understand the content of the page.</p>
+                    <li> User interface images: These assist with the interface of the webpage, but are not required to understand the content of the page.</p>
+                </ul>
+            <p>Background images aren't set in the HTML document. They're set in CSS.
+            <p>There are several different properties that relate to background images.
+                    <strong>background-color</strong> should always be set in case the background image fails to load.</p>
+                    <pre>body {
+    background-color: #5f9ea0;
+    background-image: url(assets/code-school-logo.png);
+}</pre>
+                    <div class="foundations-example-chp3-base foundations-example-chp3-bgcolor"></div>
+                    
+                    <p><strong>background-repeat</strong> makes an image repeat, or not, on the background. Values can be "repeat" (which is the default if not specified), "repeat-x" (tiles images horizontally), "repeat-y" (tiles images vertically), and "no-repeat."</p>
+                    <pre>body {
+    background-color: #5f9ea0;
+    backgroung-image: url(assets/code-school-logo.png);
+    background-repeat: no-repeat;
+}</pre>
+                    <div class="foundations-example-chp3-base foundations-example-chp3-repeat"></div>
+
+                    <p><strong>background-position</strong> can be used to position the image in a container and uses two keywords.</p>
+                    <p>The first keyword can be either "top," "center," or "bottom."</p>
+                        <p>The second keyword can be either "left," "center," or "right."</p>
+
+                    <pre>body {
+    background-color: #5f9ea0;
+    background-image: url(assets/code-school-logo.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}</pre>
+                    <div class="foundations-example-chp3-base foundations-example-chp3-position"></div>
+
+                    <p><strong>background</strong> can also be defined in one line by first defining the color, then the image url, then the position, then the repeat.</p>
+                    <pre>body {
+    background: #5f9ea0 url(assets/code-school-logo.png) top center
+    no-repeat;
+}</pre>
+                    <div class="foundations-example-chp3-base foundations-example-chp3-shorthand"></div>
+
+                    <p>We can set different backgrounds for different containers:</p>
+                    <pre>body {
+    background: #000000 url(images/stardust.png) top left repeat;
+}
+.main-content {
+    background: #ffffff url(images/crossword.png) top left repeat;
+}
+.recipes li {
+    background: #ffffff url(images/li-bg.png) top left repeat;
+}</pre>
+                    <p>We can create an empty div container specifically for holding a background image, and put text (HTML) tags inside of it.</p>
+                    <pre>.foundations-empty-div-example {
+    background-color: #5f9ea0;
+    background-image: url(assets/code-school-logo.png);
+}
+.foundations-empty-div-example p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+        sans-serif;
+    font-size: 40px;
+    line-height: 0;
+    text-align: center; 
+}
+
+&lt;div class="foundations-empty-div-example"&gt;&lt;p&gt;Some random text placed
+over the background.&lt;/p&gt;&lt;/div&gt;</pre>
+                    <div class="foundations-example-chp3-base foundations-empty-div-example"><p>Some random text placed</p><p>over the background.</p></div>
+                </ul>
+        </div>
+        <footer>
+            <div class="mybutton"><a href="../code_school_notes.html">Main Page</a></div>
+        </footer>
+    </body>
+</html>

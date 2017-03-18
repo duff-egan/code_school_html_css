@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="../code_school_notes.css">
+       <title>The Box Model</title>
+    </head>
+    <body>
+        <header>
+            <a href="../code_school_notes.html"><img src="../assets/code-school-logo.png" alt="Code School Logo" /></a>
+            <h1>The Box Model</h1>
+        </header>
+        <div>
+            <p>It's actually important to reset the default browser styles before making modifications so that I know how my code is affecting the result.</p>
+            <pre>html, body, hl, h2, h3, p, ol, ul, li, a {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}</pre>
+            <p>Then start with the <strong>body</strong> tag and put <strong>padding</strong> around all sides:</p>
+            <pre>body {
+	padding: 20px 20px 20px 20px;
+}</pre>
+            <p>...or use <code>&lt;div&gt;</code>'s for sections to do the same thing. Then focus on the heading tags:</p>
+            <pre>h1 {
+	margin: 10px 0 15px 0;
+}</pre>
+            <p>We can use <strong>border</strong> to create a horizontal line like the <code>&lt;hr&gt;</code> tag.
+            </p>
+            <pre>h3 {
+	margin: 15px 0 15px 0;
+	border-bottom: 1px solid #CCCCCC;
+	padding-bottom: 3px;
+}</pre>
+            <p>Also, to indent lists:</p>
+            <pre>ul {
+	padding: 0 0 0 50px;
+}
+
+ol {
+	padding: 0 0 0 50px;
+}</pre>
+        </div>
+        <footer>
+            <div class="mybutton"><a href="../code_school_notes.html">Main Page</a></div>
+        </footer>
+    </body>
+</html>

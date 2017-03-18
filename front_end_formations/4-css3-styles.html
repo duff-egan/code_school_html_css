@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="../code_school_notes.css">
+       <title>CSS3 Styles</title>
+    </head>
+    <body>
+        <header>
+            <a href="../code_school_notes.html"><img src="../assets/code-school-logo.png" alt="Code School Logo" /></a>
+            <h1>CSS3 Styles</h1>
+        </header>
+        <main>
+<!-- ====================== -->
+        <section>
+
+            <h2>CSS3 Styles</h2>
+            <p>We'll be covering several different CSS3 styles:</p>
+            <ul>
+                <li>Border Radius</li>
+                <li>Box Shadow</li>
+                <li>Text Shadow</li>
+                <li>Box Sizing</li>
+                <li>Multiple Backgrounds</li>
+                <li>Color</li>
+                <li>Opacity</li>
+                <li>Gradients</li>
+            </ul>
+
+        </section>
+<!-- ====================== -->
+        <section>
+            <h2>Border Radius</h2>
+            <p>The "<strong>border-radius</strong>" property allows us to apply rounded corners to borders.</p>
+            <p>We could do this by specifying four different "border-radius" properties:</p>
+            <pre>.box {
+    background: grey;
+    height: 50px;
+    width: 200px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}</pre>
+            <p>Which creates:</p>
+
+            <div class="formations-example-chp4-base">
+                <div class="formations-example-chp4-border-radius-1">
+                </div>
+            </div>
+            <p>We can use the shorthand border-radius property to specify all corners at once:</p> 
+
+           <pre>.box {
+    background: grey;
+    height: 50px;
+    width: 200px;
+    border-radius: 15px;
+}</pre>
+
+            <p>We can also use shorthand to specify each border-radius value individually in order:</p>
+
+            <pre>border-radius: &lt;top left&gt; &lt;top right&gt; &lt;bottom right&gt; &lt;bottom left&gt;</pre>
+
+           <pre>.box {
+    background: grey;
+    height: 50px;
+    width: 200px;
+    border-radius: 4px 30px 12px 20px;
+}</pre> 
+            
+            <p>Which creates:</p>
+
+            <div class="formations-example-chp4-base">
+                <div class="formations-example-chp4-border-radius-2">
+                </div>
+            </div>
+
+            <p>In addition to using pixel values, we can specify the border-radius value in percentages:</p>
+
+            <pre>.box {
+    background: grey;
+    height: 50px;
+    width: 200px;
+    border-radius: 50%;
+}</pre>
+
+            <p>Which creates:</p>
+
+            <div class="formations-example-chp4-base">
+                <div class="formations-example-chp4-border-radius-3">
+                </div>
+            </div>
+
+        </section>
+<!-- ====================== -->
+        <section>
+            <h2>Box Shadow</h2>
+            <p>The "<strong>box-shadow</strong>" property allows us to apply a shadow on a given element.</p>
+            <p>The box-shadow property has several value inputs:</p>
+            <pre>box-shadow: &lt;inset&gt; &lt;offset-x&gt; &lt;offset-y&gt; &lt;blur-radius&gt;
+    &lt;spread-radius&gt; &lt;color&gt;</pre>
+            <ul>
+                <li>If "inset" is not specified (which is the default), a <em>drop shadow</em> is created. If you use the keyword "inset" then an <em>inset shadow</em> is created.</li>
+                <li>The "offset-x" value moves the shadow a certain distance on the x-axis, or left and right.</li>
+                <li>The "offset-y" value moves the shadow a certain distance on the y-axis, or up and down.</li>
+                <li>The "blur-radius" value alters the amount of blur on the shadow. Larger values cause it to become bigger and lighter.</li>
+                <li>The "spread-radius" causes the shadow to exand or shrink.</li>
+                <li>The "color" value allows us to change the color of the shadow.</li>
+            </ul>
+            <p>The following code doesn't specify an inset shadow, so it's going to be a drop shadow. Then we're specifying a 3px offset-x value, a 3px offset-y value, and a 4px blur-radius. We're not specifying a spread-radius value, so the drop shadow is the same size as the element. And, in this case we're specifying a blue color for the shadow:</p>
+
+            <pre>.box {
+    background: grey;
+    height: 50px;
+    width: 200px;
+    box-shadow: 3px 3px 4px #00f;
+}</pre>
+
+            <p>Which creates:</p>
+
+            <div class="formations-example-chp4-base">
+                <div class="formations-example-chp4-box-shadow">
+                </div>
+            </div>
+            <p>What if we wanted to set the spread-radius value instead of the blur-radius value?</p>
+
+        </section>
+<!-- ====================== -->
+       
+
+<!-- ====================== -->
+        </main>
+        <footer>
+            <div class="mybutton"><a href="../code_school_notes.html">Main Page</a></div>
+        </footer>
+    </body>
+</html>

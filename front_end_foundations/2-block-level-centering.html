@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="../code_school_notes.css">
+       <title>Block Level &amp; Centering</title>
+    </head>
+    <body>
+        <header>
+            <a href="../code_school_notes.html"><img src="../assets/code-school-logo.png" alt="Code School Logo" /></a>
+            <h1>Block Level &amp; Centering</h1>
+        </header>
+        <div>
+            <h2>Block Level</h2>
+            <p><code>img</code> is an "inline-level" tag while a text tag is a "block-level" tag.</p>
+            <p>To make something like an image "block-level" so it can be centered:</p>
+            <pre>.header img {
+    display: block;
+}</pre>
+            <h2>Center</h2>
+            <p>There are two main ways to center things, but the CSS you write depends on what you're centering.</p>
+            <ul>
+                <li>If you want to center an <em>entire</em> block-level tag, <em>and</em> it is fixed-width, then set the left and right margins to "auto."</li>
+                <li>If you want to center content (children) that are <em>inside</em> a block-level tag, then use:</li>
+             </ul>
+             <pre>text-align: center;</pre>
+        </div>
+        <footer>
+            <div class="mybutton"><a href="../code_school_notes.html">Main Page</a></div>
+        </footer>
+    </body>
+</html>

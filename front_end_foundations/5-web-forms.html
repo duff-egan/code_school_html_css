@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="../code_school_notes.css">
+       <title>Creating Web Forms</title>
+    </head>
+    <body>
+        <header>
+            <a href="../code_school_notes.html"><img src="../assets/code-school-logo.png" alt="Code School Logo" /></a>
+            <h1>Creating Web Forms</h1>
+        </header>
+        <div>
+<!-- ====================== -->
+            <h2>Forms and Types</h2>
+            <p>Some HTML code for a very simple form:</p>
+            <pre>&lt;form&gt;
+    &lt;label&gt;Recipe Name&lt;/label&gt;
+    &lt;input type="text"&gt;
+    &lt;input type="submit" value="Click to Submit"&gt;
+&lt;/form&gt;</pre>
+            <p>Creates:</p>
+            <div class="foundations-example-chp5-base">
+                <form>
+                    <label>Recipe Name</label>
+                    <input type="text">
+                    <input type="submit" value="Click to Submit">
+                </form>
+            </div>
+            
+            <p>The <strong>type</strong> attribute sets the kind of input field that will display:</p>
+            
+            <div class="foundations-example-chp5-base">
+                <p><code>&lt;input type="text"&gt; </code><input type="text"></p>
+                <p><code>&lt;input type="checkbox"&gt; </code><input type="checkbox"></p>
+                <p><code>&lt;input type="radio"&gt; </code><input type="radio"></p>
+                <p><code>&lt;input type="file"&gt; </code><input type="file"></p>
+                <p><code>&lt;input type="password"&gt; </code><input type="password"></p>
+                <p><code>&lt;input type="submit"&gt; </code><input type="submit"></p>
+            </div>
+            
+            <h2>The 'for' and 'id' Attributes</h2>
+            <p>There are also some attributes you should add to your labels and inputs in order to connect them together at the HTML level.</p>
+            <p>The value for the <strong>for</strong> attribute in the label should be the same as the value of the <strong>id</strong> attribute in an input field to associate the label and input.</p>
+            <p>Each for/id pair has to be unique on the page.</p>
+
+            <pre>&lt;form&gt;
+    &lt;label for="recipe-name"&gt;Recipe Name&lt;/label&gt;
+    &lt;input type="text" id="recipe-name"&gt;
+    &lt;input type="submit" value="Click to Submit"&gt;
+&lt;/form&gt;</pre>
+<!-- ====================== -->
+            <h2>Using a textarea Instead of an Input</h2>
+            <p><strong>input</strong> tags should be used for short or single-line user input.</p>
+            <p>The <strong>textarea</strong> tag is used for multi-line user input. Unlike the input tags, the textarea tag uses opening and closing tags. Also, a textarea tag doesn't require a "type" because the only thing that can go in there is text.</p>
+            <pre>&lt;form&gt;
+    &lt;label for="ingredients"&gt;Ingredients&lt;/label&gt;
+    &lt;textarea id="ingredients"&gt;&lt;/textarea&gt;
+    &lt;input type="submit" value="Click to Submit"&gt;
+&lt;/form&gt;</pre>
+            <p>Creates:</p>
+            <div class="foundations-example-chp5-base">
+                <form>
+                    <label for="ingredients">Ingredients</label>
+                    <textarea id="ingredients"></textarea>
+                    <input type="submit" value="Click to Submit">
+                </form>
+            </div>
+<!-- ====================== -->        
+            <h2>Styling Forms</h2>
+            <p><strong>label</strong>s and <strong>input</strong>s are inline-level tags, but it usually makes sense to display one on top of the other like block-level instead of side-by-side.</p>
+            
+            <pre>.foundations-example-chp5-block label,
+        .foundations-example-chp5-block input {
+    display: block;
+}
+
+&lt;div class="foundations-example-chp5-block"&gt;
+    &lt;form&gt;
+        &lt;label&gt;Recipe Name&lt;/label&gt;
+        &lt;input type="text"&gt;
+        &lt;input type="submit" value="Click to Submit"&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</pre>  
+            <p>Creates:</p>    
+            <div class="foundations-example-chp5-base foundations-example-chp5-block">
+                <form>
+                    <label>Recipe Name</label>
+                    <input type="text">
+                    <input type="submit" value="Click to Submit">
+                </form>
+            </div>
+            
+            <p>Once you've got both tags displaying as block-level, you can style them just like you would any other block-level tag. This code will add margin to the bottom of the <strong>label</strong> element now:</p>
+            <pre>.foundations-example-chp5-block label,
+        .foundations-example-chp5-block input {
+    display: block;
+}
+.foundations-example-chp5-margin label {
+    margin-bottom: 5px;
+}
+
+&lt;div class="foundations-example-chp5-block
+        foundations-example-chp5-margin"&gt;
+    &lt;form&gt;
+        &lt;label&gt;Recipe Name&lt;/label&gt;
+        &lt;input type="text"&gt;
+        &lt;input type="submit" value="Click to Submit"&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</pre>
+            <p>Creates:</p>
+            <div class="foundations-example-chp5-base foundations-example-chp5-block foundations-example-chp5-margin">
+                <form>
+                    <label>Recipe Name</label>
+                    <input type="text">
+                    <input type="submit" value="Click to Submit">
+                </form>
+            </div>
+
+            <p>When we have multiple inputs, we can adjust the margins between them as well as the width of the input boxes in order to make them consistent.</p>
+            <pre>.foundations-example-chp5-block label,
+        .foundations-example-chp5-block input {
+    display: block;
+}
+.foundations-example-chp5-margin label {
+    margin-bottom: 5px;
+}
+.foundations-example-chp5-width input {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+&lt;div class="foundations-example-chp5-block
+        foundations-example-chp5-margin
+            foundations-example-chp5-width"&gt;
+    &lt;form&gt;
+        &lt;label&gt;Recipe Name&lt;/label&gt;
+        &lt;input type="text"&gt;
+        &lt;label&gt;Your Name&lt;/label&gt;
+        &lt;input type="text"&gt;
+        &lt;label&gt;Your Email&lt;/label&gt;
+        &lt;input type="email"&gt;
+        &lt;input type="submit" value="Click to Submit"&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</pre>
+            <p>Creates:</p>
+            <div class="foundations-example-chp5-base foundations-example-chp5-block foundations-example-chp5-margin foundations-example-chp5-width">
+                <form>
+                    <label>Recipe Name</label>
+                    <input type="text">
+                    <label>Your Name</label>
+                    <input type="text">
+                    <label>Your Email</label>
+                    <input type="email">
+                    <input type="submit" value="Click to Submit">
+                </form>
+            </div>
+
+            <h2>Attribute Selectors</h2>
+            <p>However, when we set the width on all of the input tags, we made the "Click to Submit" button the same width as the input boxes, because it is also an input element. But we don't really want the submit button to be so wide.</p>
+            <p>To remedy this, we can use an <strong>attribute selector</strong>. Attribute selectors are a way to style a tag based on one of its attributes</p>
+            <p>We write the name of the tag (in this case it's "input"), then inside of square brackets we write the name of the attribute (in this case it's "type"), and the attribute's value (in this case it's "submit").</p>
+            <p>My HTML code doesn't change. I just create another CSS class and add the attribute selector to it:
+            <pre>.foundations-example-chp5-width input[type=submit] {
+    width: 120px;
+}</pre>
+            <p>Which creates:</p>
+            <div class="foundations-example-chp5-base foundations-example-chp5-block foundations-example-chp5-margin foundations-example-chp5-width foundations-example-chp5-width-2">
+                <form>
+                    <label>Recipe Name</label>
+                    <input type="text">
+                    <label>Your Name</label>
+                    <input type="text">
+                    <label>Your Email</label>
+                    <input type="email">
+                    <input type="submit" value="Click to Submit">
+                </form>
+            </div>
+            <h2>Styling Inputs</h2>
+            <p>We can do something similar to other input types.</p>
+            <p>The container around an input is actually just a border, so you can style it with the <strong>border</strong> property.</p>
+            <pre>.foundations-example-chp5-input-styling input[type=text] {
+    border: 3px solid #7facaa;
+}
+
+&lt;div class="foundations-example-chp5-block
+    foundations-example-chp5-margin
+        foundations-example-chp5-width
+            foundations-example-chp5-input-styling-1"&gt;
+    &lt;form&gt;
+        &lt;label&gt;Recipe Name&lt;/label&gt;
+        &lt;input type="text"&gt;
+        &lt;label&gt;Your Name&lt;/label&gt;
+        &lt;input type="text"&gt;
+        &lt;label&gt;Your Email&lt;/label&gt;
+        &lt;input type="email"&gt;
+        &lt;input type="submit" value="Click to Submit"&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</pre>
+            <p>Creates:</p>
+
+            <div class="foundations-example-chp5-base foundations-example-chp5-block foundations-example-chp5-margin foundations-example-chp5-width foundations-example-chp5-width-2 foundations-example-chp5-input-styling-1">
+                <form>
+                    <label>Recipe Name</label>
+                    <input type="text" value="Gooseberry Pie">
+                    <label>Your Name</label>
+                    <input type="text" value="Suzy Homemaker">
+                    <label>Your Email</label>
+                    <input type="email" value="suzy@home.com">
+                    <input type="submit" value="Click to Submit">
+                </form>
+            </div>
+
+            <p>We've adjusted the width of our input fields by using the <strong>width</strong> property, but we can't just use the <strong>height</strong> property to adjust the height of text input fields.</p>
+            <p>Instead, we have to use a combination of changing the font size, or padding. In other words, to adjust the height of the input, we style the text inside.</p>
+            <p>For example, if we change the <strong>font-size</strong>, the text box will automatically adjust its size to contain the text. Also, if we want to make the input larger beyond just increasing the text size, we can add <strong>padding</strong> to the text box.</p>
+
+            <pre>.foundations-example-chp5-input-styling-2 input[type=text] {
+    border: 3px solid #7facaa;
+    font-size: 24px;
+    padding: 10px;
+}
+
+&lt;div class="foundations-example-chp5-block
+    foundations-example-chp5-margin
+        foundations-example-chp5-width
+            foundations-example-chp5-input-styling-2"&gt;
+    &lt;form&gt;
+        &lt;label&gt;Recipe Name&lt;/label&gt;
+        &lt;input type="text"&gt;
+        &lt;label&gt;Your Name&lt;/label&gt;
+        &lt;input type="text"&gt;
+        &lt;label&gt;Your Email&lt;/label&gt;
+        &lt;input type="email"&gt;
+        &lt;input type="submit" value="Click to Submit"&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</pre>
+
+            <p>Creates:</p>
+
+            <div class="foundations-example-chp5-base foundations-example-chp5-block foundations-example-chp5-margin foundations-example-chp5-width foundations-example-chp5-width-2 foundations-example-chp5-input-styling-2">
+                <form>
+                    <label>Recipe Name</label>
+                    <input type="text" value="Gooseberry Pie">
+                    <label>Your Name</label>
+                    <input type="text" value="Suzy Homemaker">
+                    <label>Your Email</label>
+                    <input type="email" value="suzy@home.com">
+                    <input type="submit" value="Click to Submit">
+                </form>
+            </div>
+
+            <h2>Styling textareas</h2>
+            <p>On the other hand, <strong>textarea</strong>s <em>can</em> be sized with the <strong>width</strong> and <strong>height</strong> properties.</p>
+
+            <pre>.foundations-example-chp5-textareas {
+    width: 99%;
+    height: 100px;
+}
+
+&lt;div class="foundations-example-chp5-block
+    foundations-example-chp5-margin"&gt;
+    &lt;form&gt;
+        &lt;label for="ingredients"&gt;Ingredients&lt;/label&gt;
+        &lt;textarea class="foundations-example-chp5-textareas"
+            id="ingredients"&gt;&lt;/textarea&gt;
+        &lt;input type="submit" value="Click to Submit"&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</pre>
+
+            <p>Creates:</p>
+
+            <div class="foundations-example-chp5-base foundations-example-chp5-block foundations-example-chp5-margin">
+                <form>
+                    <label for="ingredients">Ingredients</label>
+                    <textarea class="foundations-example-chp5-textareas" id="ingredients">4 cups gooseberries
+2 cups sugar
+4 cups water
+                    </textarea>
+                    <input type="submit" value="Click to Submit">
+                </form>
+            </div>
+
+            <h2>Creating a Separate Style for a checkbox Input</h2>
+            <p>It looks awkward if the newsletter <strong>label</strong> and <strong>input</strong> are on separate lines since the checkbox is so small, so we can use attribute selectors again to make just this input and label display inline.</p>
+            <p>The problem is that we've already set all of our labels and inputs to <strong>block</strong> which is forcing the checkbox to move down to a new line.</p>
+
+            <div class="foundations-example-chp5-base foundations-example-chp5-block foundations-example-chp5-margin">
+                <form>
+                    <label for ="newsletter">Get Newsletter?</label>
+                    <input type="checkbox" id="newsletter">
+                </form>
+            </div>
+            <p>So, again with attribute selectors, we can select all inputs with the <strong>type</strong> of <strong>checkbox</strong>, <em>and</em> all labels with a <strong>for</strong> attribute of <strong>newsletter</strong> and we can set the display back to <strong>inline</strong>.
+
+            <pre>.foundations-example-chp5-checkbox-inline input[type=checkbox],
+    .foundations-example-chp5-checkbox-inline label[for=newsletter] {
+    display: inline;
+}
+
+&lt;div class="foundations-example-chp5-base
+    foundations-example-chp5-block foundations-example-chp5-margin
+        foundations-example-chp5-checkbox-inline"&gt;
+    &lt;form&gt;
+        &lt;label for="newsletter"&gt;Get Newsletter?&lt;/label&gt;
+        &lt;input type="checkbox" id="newsletter"&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</pre>
+
+            <p>Creates:</p>
+
+            <div class="foundations-example-chp5-base foundations-example-chp5-block foundations-example-chp5-margin foundations-example-chp5-checkbox-inline">
+                <form>
+                    <label for="newsletter">Get Newsletter?</label>
+                    <input type="checkbox" id="newsletter">
+                </form>
+            </div>
+
+<!-- ====================== -->
+        </div>
+        <footer>
+            <div class="mybutton"><a href="../code_school_notes.html">Main Page</a></div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="../code_school_notes.css">
+       <title>HTML5 Forms</title>
+    </head>
+    <body>
+        <header>
+            <a href="../code_school_notes.html"><img src="../assets/code-school-logo.png" alt="Code School Logo" /></a>
+            <h1>HTML5 Forms</h1>
+        </header>
+        <main>
+<!-- ====================== -->
+        <section>
+
+            <h2>New Input Types</h2>
+            <p>HTML5 provides several new input types:</p>
+            <ul>
+                <li>Search</li>
+                <li>Email</li>
+                <li>URL</li>
+                <li>Tel</li>
+                <li>Number</li>
+                <li>Range</li>
+                <li>Date</li>
+                <li>Month</li>
+                <li>Week</li>
+                <li>Time</li>
+                <li>Datetime</li>
+                <li>Datetime-local</li>
+                <li>Color</li>
+            </ul>
+            <p>NOTE: If a browser doesn't support one of these input types, it will default to "text."</p>
+
+        </section>
+<!-- ====================== -->
+        <section>
+            <h2>Search</h2>
+            <p>The input element with a type attribute whose value is "<strong>search</strong>" represents a one-line plain-text edit control for entering one or more search terms - W3C specification.</p>
+
+            <pre>&lt;input type="search" /&gt;</pre>
+
+            <p>Creates:</p>
+
+            <div class="formations-example-chp3-base">
+                <input type="search" />
+            </div>
+
+            <p>Additionally, in mobile browers, we get some added usability benefits. On the mobile keyboard, the primary action button turns into a "search" button, which reinforces what the user is currently doing.</p>
+
+        </section>
+<!-- ====================== -->
+       <section>
+            <h2>Email</h2>
+            <p>The <strong>email</strong> input looks just like a regular text input, but with added usability on mobile devices.</p>
+
+            <pre>&lt;input type="email" /&gt;</pre>
+
+            <p>Creates:</p>
+
+            <div class="formations-example-chp3-base">
+                <input type="email" />
+            </div>
+
+            <p>Again, on mobile brower keyboards, we get some useful email-related keys, like the @ symbol, and the period.</p>
+
+        </section>
+<!-- ====================== -->
+       <section>
+            <h2>URL</h2>
+            <p>The <strong>url</strong> input looks just like a regular text input, but with added usability on mobile devices.</p>
+
+            <pre>&lt;input type="url" /&gt;</pre>
+
+            <p>Creates:</p>
+
+            <div class="formations-example-chp3-base">
+                <input type="url" />
+            </div>
+
+            <p>And again, on mobile brower keyboards, we get some useful url-related keys, such as the "/" symbol, and the ".com".</p>
+
+        </section>
+<!-- ====================== -->
+       <section>
+            <h2>Date</h2>
+            <p>The input element with a type attribute whose value is "<strong>date</strong>" represents a control for setting the element's value to a string representing a date - W3C specification.</p>
+
+            <pre>&lt;input type="date" /&gt;</pre>
+
+            <p>Creates:</p>
+
+            <div class="formations-example-chp3-base">
+                <input type="date" />
+            </div>
+
+            <p>This element provides us with a date picker that allows us to select a date from the pop-up calendar in both desktop and mobile browsers.</p>
+
+        </section>
+
+<!-- ====================== -->
+       <section>
+            <h2>Tel</h2>
+            <p>Again, the <strong>tel</strong> input looks just like a regular text input, but with added usability on mobile devices.</p>
+
+            <pre>&lt;input type="tel" /&gt;</pre>
+
+            <p>Creates:</p>
+
+            <div class="formations-example-chp3-base">
+                <input type="tel" />
+            </div>
+
+            <p>On mobile brower keyboards, the keyboard turns into the telephone keyboard.</p>
+
+        </section>
+
+<!-- ====================== -->
+       <section>
+            <h2>Number</h2>
+            <p>The input element with a type attribute whose value is "<strong>number</strong>" represents a precise control for setting the element's value to a string representing a number - W3C specification.</p>
+
+            <pre>&lt;input type="number" /&gt;</pre>
+
+            <p>Creates:</p>
+
+            <div class="formations-example-chp3-base">
+                <input type="number" />
+            </div>
+
+            <p>This gives us a control to the right side of the input box to use to increase/decrease the value of the input.</p>
+            <p>On mobile devices this prompts the number keyboard to appear.</p>
+
+
+        </section>
+
+<!-- ====================== -->
+       <section>
+            <h2>Range</h2>
+            <p>The input element with a type attribute whose value is "<strong>range</strong>" represents an imprecise control for setting the element's value to a string representing a number - W3C specification.</p>
+
+            <pre>&lt;input type="range" /&gt;</pre>
+
+            <p>Creates:</p>
+
+            <div class="formations-example-chp3-base">
+                <input type="range" />
+            </div>
+
+            <p>This gives us a control that allows us to drag a slider to change the number value.</p>
+
+        </section>
+
+<!-- ====================== -->
+       <section>
+            <h2>Month, Week</h2>
+
+            <pre>&lt;input type="month" /&gt;</pre>
+            <pre>&lt;input type="week" /&gt;</pre>
+
+            <p>Creates:</p>
+
+            <div class="formations-example-chp3-base">
+                <input type="month" />
+                <input type="week" />
+            </div>
+
+            <p>The <strong>month</strong> input type allows us to select a month at a time, while the <strong>week</strong> input type allows us to select a week at a time.</p>
+
+        </section>
+
+<!-- ====================== -->
+       <section>
+            <h2>Time, Datetime-Local</h2>
+            <p>The input element with a type attribute whose value is "<strong>datetime-local</strong>" represents a control for setting the element's value to a string representing a local date and time (with no timezone information) - W3C specification.</p>
+
+            <pre>&lt;input type="time" /&gt;</pre>
+            <pre>&lt;input type="week" /&gt;</pre>
+
+            <p>Creates:</p>
+
+            <div class="formations-example-chp3-base">
+                <input type="time" />
+                <input type="datetime-local" />
+            </div>
+
+            <p>The <strong>time</strong> input type allows us to select a given time, while the <strong>datetime-local</strong> input type allows us to select not only a date, but a time as well.</p>
+
+        </section>
+
+<!-- ====================== -->
+       <section>
+            <h2>Color</h2>
+            <p>The input element with a type attribute whose value is "<strong>color</strong>" represents a color-well control for setting the element's value to a string representing a simple color - W3C specification.</p>
+
+            <pre>&lt;input type="color" /&gt;</pre>
+
+            <p>Creates:</p>
+
+            <div class="formations-example-chp3-base">
+                <input type="color" />
+            </div>
+
+            <p>This creates a toggle that allows us to bring up a color-picker.</p>
+
+        </section>
+
+<!-- ====================== -->
+        <section>
+
+            <h2>New Form Elements</h2>
+            <p>HTML5 provides new form elements:</p>
+            <ul>
+                <li>Datalist</li>
+                <li>Keygen</li>
+                <li>Output</li>
+            </ul>
+            <p>Here we're only going to focus on the datalist element because it's the most commonly used one.</p>
+
+        </section>
+
+<!-- ====================== -->
+       <section>
+            <h2>Datalist</h2>
+            <p>The "<strong>datalist</strong>" element represents a set of option elements that represent predefined options for other controls - W3C specification.</p>
+            <p>The "id" and "list" values need to be the same for them to link together properly. The "option values" will be the values available to our input:</p>
+
+            <pre>&lt;input type="text" list="browsers" /&gt;
+&lt;datalist id="browsers"&gt;
+    &lt;option value="Chrome"&gt;
+    &lt;option value="Firefox"&gt;
+    &lt;option value="Internet Explorer"&gt;
+    &lt;option value="Opera"&gt;
+    &lt;option value="Safari"&gt;
+&lt;/datalist&gt;</pre>
+
+            <p>Creates:</p>
+
+            <div class="formations-example-chp3-base">
+                <input type="text" list="browsers" />
+                <datalist id="browsers">
+                    <option value="Chrome">
+                    <option value="Firefox">
+                    <option value="Internet Explorer">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist>
+            </div>
+
+            <p>The input looks like a regular text input, but when we start typing, you can see that we get auto-complete suggestions based on the option values that we specified within the datalist element. Also, when the cursor is in the input box, a dropdown arrow appears at the right allowing us to select from the available options with our mouse.</p>
+
+        </section>
+
+<!-- ====================== -->
+        <section>
+
+            <h2>New Form Attributes</h2>
+            <p>HTML5 provides several new form attributes:</p>
+            <ul>
+                <li>Placeholder</li>
+                <li>Autofocus</li>
+                <li>Autocomplete</li>
+                <li>Required</li>
+                <li>Pattern</li>
+                <li>List</li>
+                <li>Multiple</li>
+                <li>Novalidate</li>
+                <li>Formnovalidate</li>
+                <li>Form</li>
+                <li>Formaction</li>
+                <li>Formenctype</li>
+                <li>Formmethod</li>
+                <li>Formtarget</li>
+            </ul>
+            <p>Here we're going to focus primarily on the <strong>placeholder</strong>, <strong>autofocus</strong>, <strong>required</strong>, and <strong>pattern</strong> attributes.</p>
+
+        </section>
+
+<!-- ====================== -->
+       <section>
+            <h2>Placeholder</h2>
+            <p>The "<strong>placeholder</strong>" attribute allows you to specify a message that is shown inside the input. That message is then hidden when the user starts typing, but then returns when focus is lost on the input (when the input is blank).</p>
+            <p>We could use the "value" attribute in an input field, but when we do that, it requires the user to clear out that value before entering information into the field:</p>
+
+            <pre>&lt;input type="text" value="Enter your email..." /&gt;</pre>
+
+            <p>Creates:</p>
+
+            <div class="formations-example-chp3-base">
+                <input type="text" value="Enter your email..." />
+            </div>
+
+            <p>By using the "placeholder" attribute, we make it easier for the user. The text in the input box doesn't have to be cleared, and the user is able to immediately type information into the field:</p>
+
+            <pre>&lt;input type="text" placeholder="Enter your email..." /&gt;</pre>
+
+             <p>Creates:</p>
+
+            <div class="formations-example-chp3-base">
+                <input type="text" placeholder="Enter your email..." />
+            </div>
+
+        </section>
+
+<!-- ====================== -->
+       <section>
+            <h2>Autofocus</h2>
+            <p>The "<strong>autofocus</strong>" attribute will automatically focus the specified input when the page is rendered. This is something that used to have to be done in JavaScript. But now we just have to add one simple attribute to get the effect.</p>
+
+            <pre>&lt;input type="text" autofocus /&gt;</pre>
+
+        </section>
+
+<!-- ====================== -->
+       <section>
+            <h2>Required</h2>
+            <p>If you add the new HTML5 "<strong>required</strong>" attribute to an input, when the form is submitted, the user will be notified of an error if the field is left blank.</p>
+            <p>Like the "autofocus" attribute, all we have to do is add the "required" attribute to our input.</p> 
+
+            <pre>&lt;input type="text" required /&gt;</pre>
+
+        </section>
+
+<!-- ====================== -->
+       <section>
+            <h2>Pattern</h2>
+            <p>The "<strong>pattern</strong>" attribute accepts a JavaScript regular expression that can be used to validate a form field to match the pattern.</p>
+            <p>In this example we're matching three digits:</p>
+
+            <pre>&lt;input type="text" pattern="[0-9]{3}" /&gt;</pre>
+
+            <p>When the form is submitted, if the user's entry doesn't match the pattern exactly, they're notified of an error until the pattern is matched.</p>
+
+        </section>
+
+<!-- ====================== -->
+        </main>
+        <footer>
+            <div class="mybutton"><a href="../code_school_notes.html">Main Page</a></div>
+        </footer>
+    </body>
+</html>
