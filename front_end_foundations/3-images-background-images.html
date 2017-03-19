@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-       <link rel="stylesheet" href="../code_school_notes.css">
+       <link rel="stylesheet" href="../assets/stylesheets/code_school_notes.css">
        <title>Images &amp; Background Images</title>
     </head>
     <body>
         <header>
-            <a href="../index.html"><img src="../assets/code-school-logo.png" alt="Code School Logo" /></a>
+            <a href="../index.html"><img src="../assets/images/code-school-logo.png" alt="Code School Logo" /></a>
             <h1>Images &amp; Background Images</h1>
         </header>
         <div>
@@ -21,14 +21,14 @@
                     <strong>background-color</strong> should always be set in case the background image fails to load.</p>
                     <pre>body {
     background-color: #5f9ea0;
-    background-image: url(assets/code-school-logo.png);
+    background-image: url(../assets/images/code-school-logo.png);
 }</pre>
                     <div class="foundations-example-chp3-base foundations-example-chp3-bgcolor"></div>
                     
                     <p><strong>background-repeat</strong> makes an image repeat, or not, on the background. Values can be "repeat" (which is the default if not specified), "repeat-x" (tiles images horizontally), "repeat-y" (tiles images vertically), and "no-repeat."</p>
                     <pre>body {
     background-color: #5f9ea0;
-    backgroung-image: url(assets/code-school-logo.png);
+    backgroung-image: url(../assets/images/code-school-logo.png);
     background-repeat: no-repeat;
 }</pre>
                     <div class="foundations-example-chp3-base foundations-example-chp3-repeat"></div>
@@ -39,7 +39,7 @@
 
                     <pre>body {
     background-color: #5f9ea0;
-    background-image: url(assets/code-school-logo.png);
+    background-image: url(../assets/images/code-school-logo.png);
     background-repeat: no-repeat;
     background-position: bottom right;
 }</pre>
@@ -47,7 +47,7 @@
 
                     <p><strong>background</strong> can also be defined in one line by first defining the color, then the image url, then the position, then the repeat.</p>
                     <pre>body {
-    background: #5f9ea0 url(assets/code-school-logo.png) top center
+    background: #5f9ea0 url(../assets/images/code-school-logo.png) top center
     no-repeat;
 }</pre>
                     <div class="foundations-example-chp3-base foundations-example-chp3-shorthand"></div>
@@ -65,7 +65,7 @@
                     <p>We can create an empty div container specifically for holding a background image, and put text (HTML) tags inside of it.</p>
                     <pre>.foundations-empty-div-example {
     background-color: #5f9ea0;
-    background-image: url(assets/code-school-logo.png);
+    background-image: url(../assets/images/code-school-logo.png);
 }
 .foundations-empty-div-example p {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',

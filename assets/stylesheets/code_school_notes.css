@@ -123,21 +123,21 @@ footer {
 }
 .foundations-example-chp3-repeat {
     background-color: #5f9ea0;
-    background-image: url(assets/code-school-logo.png);
+    background-image: url(../images/code-school-logo.png);
     background-repeat: no-repeat;
 }
 .foundations-example-chp3-position {
     background-color: #5f9ea0;
-    background-image: url(assets/code-school-logo.png);
+    background-image: url(../images/code-school-logo.png);
     background-repeat: no-repeat;
     background-position: bottom right;
 }
 .foundations-example-chp3-shorthand {
-    background: #5f9ea0 url(assets/code-school-logo.png) top center no-repeat;
+    background: #5f9ea0 url(../images/code-school-logo.png) top center no-repeat;
 }
 .foundations-empty-div-example {
     background-color: #5f9ea0;
-    background-image: url(assets/code-school-logo.png);
+    background-image: url(../images/code-school-logo.png);
 }
 .foundations-empty-div-example p {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
