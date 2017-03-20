@@ -1,3 +1,3 @@
 # README
 
-[duff-egan GitHub](https://github.com/duff-egan) Code School lesson notes.
+[Code School](https://www.codeschool.com/) lesson notes.
