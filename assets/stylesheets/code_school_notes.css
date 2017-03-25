@@ -233,3 +233,13 @@ footer {
     width: 200px;
     box-shadow: 3px 3px 4px #00f;
 }
+.formations-example-chp5-base {
+    box-sizing: border-box;
+    width: 561px;
+    border: 1px dashed #cccccc;
+    padding: 5px;
+}
+.font-face-example-chp5-google-fonts {
+        font-family: 'Tangerine', serif;
+        font-size: 48px;
+      }

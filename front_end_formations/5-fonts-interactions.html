@@ -2,6 +2,7 @@
 <html>
     <head>
        <link rel="stylesheet" href="../assets/stylesheets/code_school_notes.css">
+       <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
        <title>Fonts &amp; Interactions</title>
     </head>
     <body>
@@ -27,23 +28,31 @@
         <section>
             <h2>Font Face</h2>
             <p>Using <strong>@font-face</strong>, we have the ability to provide online fonts for use on our websites.</p>
-            +++++++++++++++ START CODING HERE ++++++++++
-            <pre>.box {
-    background: grey;
-    height: 50px;
-    width: 200px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-}</pre>
+            <p>Code School gives a .eot font specification in their example, but according to 
+            <a href="http://stackoverflow.com/questions/11002820/why-should-we-include-ttf-eot-woff-svg-in-a-font-face" target="_blank">
+                StackOverflow</a>, it is an old and poor format to use, and the .woff file type is the best.</p>
+            <p>According to <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_font-face_rule" target="_blank">
+                W3Schools.com</a>, "Internet Explorer 8 and earlier, do not support the @font-face rule with the WOFF format
+                (only support for EOT format)."</p>
+            <p>Additionally, the @font-face rule requires that the fonts be present on our web server.
+            This seems a little outdated and inefficient to me.</p>
+            
+            <p>It seems like it would be much easier to use <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>. In the &lt;head&gt; of the page, we put something like:</p>
+            <pre>&lt;link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Tangerine"&gt;</pre>
+            <p>Then, in my CSS stylesheet:</p>
+            <pre>.font-face-example-chp5-google-fonts {
+        font-family: 'Tangerine', serif;
+        font-size: 48px;
+      }</pre>
             <p>Which creates:</p>
-
-            <div class="formations-example-chp4-base">
-                <div class="formations-example-chp4-border-radius-1">
+            <div class="formations-example-chp5-base">
+                <div class="font-face-example-chp5-google-fonts">
+                    <p>A nice looking font like this.</p>
                 </div>
             </div>
-            <p>We can use the shorthand border-radius property to specify all corners at once:</p> 
+            ======== RESTART HERE ======
+            
 
            <pre>.box {
     background: grey;
