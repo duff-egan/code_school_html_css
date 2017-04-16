@@ -1,3 +1,3 @@
 # README
 
-[Code School](https://www.codeschool.com/) lesson notes.
+[Code School Report Card](https://www.codeschool.com/users/duff-egan).
