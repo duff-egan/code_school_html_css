@@ -23,6 +23,11 @@ h1 {
     padding-bottom: 4px;
     margin-bottom: 30px;
 }
+.attribution {
+    text-align: right;
+    font-size: small;
+    margin-top: -25px;
+}
 h2 {
     margin-bottom: 10;
     font-weight: normal;
@@ -233,7 +238,7 @@ footer {
     width: 200px;
     box-shadow: 3px 3px 4px #00f;
 }
-.formations-example-chp5-base {
+.formations-example-chp5-fontface {
     box-sizing: border-box;
     width: 561px;
     border: 1px dashed #cccccc;
@@ -242,4 +247,54 @@ footer {
 .font-face-example-chp5-google-fonts {
         font-family: 'Tangerine', serif;
         font-size: 48px;
-      }
+}
+.formations-example-chp5-box {
+    height: 50px;
+    width: 100px;
+    border: 1px solid darkgrey;
+    background-color: #5f9ea0;
+    margin-bottom: 0px;    
+}
+.formations-example-chp5-transform-2d {
+    transform: translate(40px, 10px);
+    margin-bottom: 10px;
+}
+.formations-example-chp5-transform-rotate {
+    transform: rotate(45deg);
+    margin-bottom: 40px;
+}
+.formations-example-chp5-transform-scale {
+    transform: scale(1.4);
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.formations-example-chp5-transform-skewX {
+    transform: skewX(25deg);
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.formations-example-chp5-transform-skewY {
+    transform: skewY(-25deg);
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+.formations-example-chp5-box-transition {
+    height: 45px;
+    width: 200px;
+    border: 1px solid darkgrey;
+    background-color: #5f9ea0;
+    margin-bottom: 0px;
+    line-height: 2.8;
+    text-align: center;
+    transition: all 1.0s, ease-in-out;
+}
+.formations-example-chp5-box-transition:hover {
+    background-color: #0985E8;
+    color: #ffffff;
+}
+.formations-example-chp5-progressive-enhancement {
+    border-radius: 10px;
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.75);
+}

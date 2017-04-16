@@ -9,6 +9,8 @@
         <header>
             <a href="../index.html"><img src="../assets/images/code-school-logo.png" alt="Code School Logo" /></a>
             <h1>Fonts &amp; Interactions</h1>
+            <div class="attribution"><a href="https://www.codeschool.com" target="blank_" >Visit the CodeSchool
+            site and get more information on this course!</a></div>
         </header>
         <main>
 <!-- ====================== -->
@@ -21,6 +23,7 @@
                 <li>Transforms</li>
                 <li>Transitions</li>
                 <li>Progressive Enhancement</li>
+                <li>Additional Resources</li>
             </ul>
 
         </section>
@@ -28,15 +31,37 @@
         <section>
             <h2>Font Face</h2>
             <p>Using <strong>@font-face</strong>, we have the ability to provide online fonts for use on our websites.</p>
+            <pre>@font-face {
+  font-family: 'DroidSerifRegular'
+  src: url('DroidSerif.eot');
+  font-style: normal;
+  font-weight: normal;
+}</pre>
+            <pre>body {
+  font-family: DroidSerifRegular, Georgia, "Times New Roman", serif;
+}</pre>
+            <p>To add a bold version of the font 'DroidSerifRegular', DroidSerifBold', using the local version at 'DroidSerifBold.eot', 
+            we'll create a new @font-face declaration, but set it up so we can use 'font-weight' to change the weight.</p>
+            <pre>@font-face {
+  font-family: 'DroidSerifRegular'
+  src: url('DroidSerif.eot');
+  font-style: normal;
+  font-weight: bold;
+}</pre>
+            <p>Because h1 will already use font-family from the body element, so we'll only need to set the font-weight here.</p>
+            <pre>h1 {
+  font-weight: bold;
+}</pre>
             <p>Code School gives a .eot font specification in their example, but according to 
             <a href="http://stackoverflow.com/questions/11002820/why-should-we-include-ttf-eot-woff-svg-in-a-font-face" target="_blank">
                 StackOverflow</a>, it is an old and poor format to use, and the .woff file type is the best.</p>
             <p>According to <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_font-face_rule" target="_blank">
                 W3Schools.com</a>, "Internet Explorer 8 and earlier, do not support the @font-face rule with the WOFF format
                 (only support for EOT format)."</p>
-            <p>Additionally, the @font-face rule requires that the fonts be present on our web server.
-            This seems a little outdated and inefficient to me.</p>
-            
+            <p>Additionally, the @font-face rule <a href="https://www.w3schools.com/css/css3_fonts.asp" target="blank_">requires that the 
+            fonts be present on the client computer</a> and instructs the browser to download the font from where it's hosted. This seems a little 
+            outdated and inefficient to me. However, it also appears to have the <a href="https://css-tricks.com/snippets/css/using-font-face/" target="blank_">deepest browser support 
+            at this time</a>.</p>
             <p>It seems like it would be much easier to use <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>. In the &lt;head&gt; of the page, we put something like:</p>
             <pre>&lt;link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Tangerine"&gt;</pre>
@@ -46,92 +71,169 @@
         font-size: 48px;
       }</pre>
             <p>Which creates:</p>
-            <div class="formations-example-chp5-base">
+            <div class="formations-example-chp5-fontface">
                 <div class="font-face-example-chp5-google-fonts">
                     <p>A nice looking font like this.</p>
                 </div>
             </div>
-            ======== RESTART HERE ======
-            
-
-           <pre>.box {
-    background: grey;
-    height: 50px;
-    width: 200px;
-    border-radius: 15px;
-}</pre>
-
-            <p>We can also use shorthand to specify each border-radius value individually in order:</p>
-
-            <pre>border-radius: &lt;top left&gt; &lt;top right&gt; &lt;bottom right&gt; &lt;bottom left&gt;</pre>
-
-           <pre>.box {
-    background: grey;
-    height: 50px;
-    width: 200px;
-    border-radius: 4px 30px 12px 20px;
-}</pre> 
-            
-            <p>Which creates:</p>
-
-            <div class="formations-example-chp4-base">
-                <div class="formations-example-chp4-border-radius-2">
-                </div>
-            </div>
-
-            <p>In addition to using pixel values, we can specify the border-radius value in percentages:</p>
-
-            <pre>.box {
-    background: grey;
-    height: 50px;
-    width: 200px;
-    border-radius: 50%;
-}</pre>
-
-            <p>Which creates:</p>
-
-            <div class="formations-example-chp4-base">
-                <div class="formations-example-chp4-border-radius-3">
-                </div>
-            </div>
-
         </section>
 <!-- ====================== -->
         <section>
-            <h2>Box Shadow</h2>
-            <p>The "<strong>box-shadow</strong>" property allows us to apply a shadow on a given element.</p>
-            <p>The box-shadow property has several value inputs:</p>
-            <pre>box-shadow: &lt;inset&gt; &lt;offset-x&gt; &lt;offset-y&gt; &lt;blur-radius&gt;
-    &lt;spread-radius&gt; &lt;color&gt;</pre>
+            <h2>CSS3 Transforms</h2>
+            <p>Using the <strong>transform</strong> property in CSS3, we can translate, rotate, scale, and skew various elements in CSS.</p>
+            
+            <p>You can create a 2D translation using transform:</p>
+            <pre>.element {
+    transform: translate(40px, 10px);
+}</pre>
+            <p>Which creates:</p>
+            <div class="formations-example-chp5-box">Original</div>
+            <div class="formations-example-chp5-box formations-example-chp5-transform-2d">2D Translate</div>  
+            
+            <p>We're setting a 40px x-axis value, and a 10px y-axis value.</p>
+            <p>The <strong>translate</strong> function takes two arguments:</p>
             <ul>
-                <li>If "inset" is not specified (which is the default), a <em>drop shadow</em> is created. If you use the keyword "inset" then an <em>inset shadow</em> is created.</li>
-                <li>The "offset-x" value moves the shadow a certain distance on the x-axis, or left and right.</li>
-                <li>The "offset-y" value moves the shadow a certain distance on the y-axis, or up and down.</li>
-                <li>The "blur-radius" value alters the amount of blur on the shadow. Larger values cause it to become bigger and lighter.</li>
-                <li>The "spread-radius" causes the shadow to exand or shrink.</li>
-                <li>The "color" value allows us to change the color of the shadow.</li>
+              <li>A translation value for the x-axis which can be either a length or a percentage.</li>
+              <li>A translation value for the y-axis which can be either a length or a percentage. If we don't specify this value, it sets to 0 by default.</li>
             </ul>
-            <p>The following code doesn't specify an inset shadow, so it's going to be a drop shadow. Then we're specifying a 3px offset-x value, a 3px offset-y value, and a 4px blur-radius. We're not specifying a spread-radius value, so the drop shadow is the same size as the element. And, in this case we're specifying a blue color for the shadow:</p>
-
-            <pre>.box {
-    background: grey;
-    height: 50px;
-    width: 200px;
-    box-shadow: 3px 3px 4px #00f;
+            <p>The x and y values can also be used individually:</p>
+            <pre>.element {
+    transform: translateX(20px);
+}</pre>
+            <pre>.element {
+    transform: translateY(30px);
 }</pre>
 
+            <p>With <strong>rotate</strong>, you can rotate an element clockwise around its origin by the specified angle:</p>
+            <pre>.element {
+    transform: rotate(45deg);
+}</pre>
             <p>Which creates:</p>
+            <div class="formations-example-chp5-box">Original</div>
+            <div class="formations-example-chp5-box formations-example-chp5-transform-rotate">Rotate</div>
 
-            <div class="formations-example-chp4-base">
-                <div class="formations-example-chp4-box-shadow">
-                </div>
-            </div>
-            <p>What if we wanted to set the spread-radius value instead of the blur-radius value?</p>
-
+            <p>With <strong>scale</strong>, you can do a 2D scale by a specified unitless number:</p>
+            <pre>.element {
+    transform: scale(1.2);
+}</pre>
+            <p>Which creates:</p>
+            <div class="formations-example-chp5-box">Original</div>
+            <div class="formations-example-chp5-box formations-example-chp5-transform-scale">Scale</div>
+            <p>The scale transform takes two arguments:</p>
+            <ul>
+              <li>The value for the x-axis, which again is a unitless number.</li>
+              <li>The value for the y-axis, which is a unitless number. If we don't specify this value, it will default to what is specified in the first argument.</li>
+            </ul>
+            <p>The x and y values can also be used individually:</p>
+            <pre>.element {
+    transform: scaleX(1.2);
+}</pre>
+            <pre>.element {
+    transform: scaleY(0.3);
+}</pre>
+            <p>With <strong>skew</strong>, an element is skewed around the x or y axis by the angle specified. Unlike the other transforms, skew only
+            allows for skewing each axis individually:</p>
+            <pre>.element {
+    transform: skewX(25deg);
+}</pre>
+            <p>Which creates:</p>
+            <div class="formations-example-chp5-box">Original</div>
+            <div class="formations-example-chp5-box formations-example-chp5-transform-skewX">SkewX</div>
+            
+            <pre>.element {
+    transform: skewY(-25deg);
+}</pre>
+            <p>Which creates:</p>
+            <div class="formations-example-chp5-box">Original</div>
+            <div class="formations-example-chp5-box formations-example-chp5-transform-skewY">SkewY</div>
         </section>
 <!-- ====================== -->
-       
-
+        <section>
+            <h2>CSS3 Transitions</h2>
+            <p>CSS3 provides <strong>transitions</strong>, which allow us to transition between two states of a specified element.</p>
+            <p>Example usage of the shorthand transition property:</p>
+            <pre>.element {
+    transition: &lt;property&gt; &lt;duration&gt; &lt;timing-function&gt; &lt;delay&gt;;
+}</pre>
+            <ul>
+              <li><strong>property</strong>: e.g., background color, font color, etc.</li>
+              <li><strong>duration</strong>: the duration value in seconds. The default is "0s" (0 seconds).</li>
+              <li><strong>timing-function</strong>: the timing of the function itself, which has a few different keywords:</li>
+                <ul>
+                  <li>ease</li>
+                  <li>ease-in</li>
+                  <li>ease-in-out</li>
+                  <li>linear</li>
+                  <li>cubic-bezier</li>
+                  <li>step-start</li>
+                  <li>step-end</li>
+                  <li>steps()</li>
+                </ul>
+                <li><strong>delay</strong>: The amount of time to wait between the change that is being requested on a specific property, and the start of the transition.</li>
+            </ul>
+            <p>We can set the transition values individually as well:</p>
+            <pre>.element {
+    transition-property: background-color;
+    transition-duration: 1.0s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.1s;
+}</pre>
+            <p>We can transition multiple properties at once (in this case the background color and font color) by using <strong>all</strong> as the transition-property:</p>
+            <pre>.element {
+    background-color: #5f9ea0;
+    transition: all 1.0s, ease-in-out;
+}</pre>
+            <pre>.element:hover {
+    background-color: #42FF21;
+    color: #ffffff;
+}</pre>
+            <p>Which creates:</p>
+            <div class="formations-example-chp5-box-transition">Hover mouse over box</div>
+  
+<<  put some more transition stuff in here that I learned on my own >>
+        </section>
+<!-- ====================== -->
+        <section>
+          <h2>Progressive Enhancement</h2>
+            <p>The term <strong>progressive enhancement</strong> refers to the use of newer features that add to the experience in modern
+            browsers that support those features, but doesn't detract from the experience in older browers.</p>
+            <p>For example, if we had an element with the border-radius and box-shadow properties...</p>
+            <pre>.element {
+    border-radius: 10px;
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.75);
+}</pre>
+            <p>it would look like this in newer browers:</p>
+            <div class="formations-example-chp5-box formations-example-chp5-progressive-enhancement"></div>
+            <p>In older browers that don't support the border-radius and box-shadow properties, it wouldn't have those 
+            features, but it would still be usable, which is what progressive enhancement is all about:</p>
+            <div class="formations-example-chp5-box"></div>
+            <p>Progressive enhancement is important to keep in mind because we want to make sure that we're creating experiences 
+            that degrade gracefully for browsers that don't support a lot of the features that have been covered here.</p>
+            
+        </section>
+<!-- ====================== -->
+        <section>
+          <h2>Additional Resources</h2>
+            <ul>
+              <li><a href="http://html5doctor.com/" target="blank_">HTML5 Doctor</a> covers all HTML5 related topics.</li>
+              <li><a href="https://html5boilerplate.com/" target="blank_">HTML5 BoilerPlate</a> is a template to use as a starter for a site 
+              but also a great place to dig through code.</li>
+              <li><a href="https://caniuse.com/" target="blank_">Can I Use</a> is a great place to determine what browsers will support the 
+              HTML, CSS, JavaScript I'm using.</li>
+              <li><a href="https://www.smashingmagazine.com/2011/08/html5-and-the-document-outlining-algorithm/" target ="blank_">HTML5 and 
+              The Document Outlining Algorithm</a> covers the HTML5 document outline </li>
+              <li><a href="http://blog.fontspring.com/2011/02/the-new-bulletproof-font-face-syntax/" target="blank_">The New Bulletproof 
+              @Font-Face Syntax</a> talks about the @Font-Face syntax and the fonts you'll need to include for the best browser support.</li>
+              <li><a href="https://gsnedders.html5.org/outliner/" target="blank_">HTML5 Outliner</a> lets you paste in a chunk of HTML or a URL 
+              and receive the output of it in browser form.</li>
+              <li><a href="https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo?hl=en" target="blank_">HTML5 
+              Outliner Chrome Extension</a> allows you to see the document outline of any site you visit in Google Chrome.</li>
+              <li><a href="https://demo.agektmr.com/datalist/" target="blank_">Datalist Experiment</a> explains various ways to use the datalist 
+              element to create useful interface components on your site.</li>
+              <li><a href="https://github.com/postcss/autoprefixer" target="blank_">Autoprefixer</a> parses CSS and add vendor prefixes to rules by Can I Use.</li>
+              <li><a href="https://kapeli.com/dash" target="blank_">Dash</a> is an API Documentation Browser and Code Snippet Manager.</li>
+            </ul>
+        </section>
 <!-- ====================== -->
         </main>
         <footer>
