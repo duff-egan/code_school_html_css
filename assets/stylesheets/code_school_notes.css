@@ -9,7 +9,8 @@
 } */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
     width: 600px; /* By defining a fixed width, I'm able to employ "margin: auto" to center the entire body */
     margin: auto;
     font-size: 16px;
