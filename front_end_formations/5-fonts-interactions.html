@@ -2,7 +2,7 @@
 <html>
     <head>
        <link rel="stylesheet" href="../assets/stylesheets/code_school_notes.css">
-       <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+       <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
        <title>Fonts &amp; Interactions</title>
     </head>
@@ -10,8 +10,10 @@
         <header>
             <a href="../index.html"><img src="../assets/images/code-school-logo.png" alt="Code School Logo" /></a>
             <h1>Fonts &amp; Interactions</h1>
-            <div class="report-card"><a href="https://www.codeschool.com/users/duff-egan" target="blank_" >View my CodeSchool 
+            <div class="profile-codeschool"><a href="https://www.codeschool.com/users/duff-egan" target="blank_" >View my CodeSchool 
                report card and get more information about this course.</a></div>
+             <div class="profile-github"><a href="https://github.com/duff-egan/code_school_html_css" target="blank_" >View the source 
+               code for this site in my GitHub repository.</a></div>
         </header>
         <main>
 <!-- ====================== -->
@@ -61,11 +63,13 @@
                 (only support for EOT format)."</p>
             <p>Additionally, the @font-face rule <a href="https://www.w3schools.com/css/css3_fonts.asp" target="blank_">requires that the 
             fonts be present on the client computer</a> and instructs the browser to download the font from where it's hosted. This seems a little 
-            outdated and inefficient to me. However, it also appears to have the <a href="https://css-tricks.com/snippets/css/using-font-face/" target="blank_">deepest browser support 
+            outdated and inefficient to me. However, it also appears to have the 
+            <a href="https://css-tricks.com/snippets/css/using-font-face/" target="blank_">deepest browser support 
             at this time</a>.</p>
-            <p>It seems like it would be much easier to use <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>. In the &lt;head&gt; of the page, we put something like:</p>
-            <pre>&lt;link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Tangerine"&gt;</pre>
+            <p>It seems like it would be much easier to use <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>. 
+            In the &lt;head&gt; of the page, we put something like:</p>
+            <pre>&lt;link href="https://fonts.googleapis.com/css?family=Tangerine"
+  rel="stylesheet"&gt;</pre>
             <p>Then, in my CSS stylesheet:</p>
             <pre>.font-face-example-chp5-google-fonts {
         font-family: 'Tangerine', serif;

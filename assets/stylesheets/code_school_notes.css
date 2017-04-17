@@ -24,10 +24,14 @@ h1 {
     padding-bottom: 4px;
     margin-bottom: 30px;
 }
-.report-card {
+.profile-codeschool {
     text-align: right;
     font-size: small;
     margin-top: -25px;
+}
+.profile-github {
+    text-align: right;
+    font-size: small;
 }
 h2 {
     margin-bottom: 10;
